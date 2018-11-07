@@ -146,13 +146,13 @@ final class ValueCollectionIterator implements \Iterator
 #### Creating a collection from an array of objects
 
 ```php
-$values = Values::fromArray([new Value, new Value]);
+$values = ValueCollection::fromArray([new Value, new Value]);
 ```
 
 #### Creating a collection from a list of objects
 
 ```php
-$values = Values::fromList(new Value, new Value);
+$values = ValueCollection::fromList(new Value, new Value);
 ```
 
 #### Creating an empty collection and adding objects to it
