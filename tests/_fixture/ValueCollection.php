@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 namespace vendor;
 
-final class ValueCollection implements \IteratorAggregate
+final class ValueCollection implements \Countable, \IteratorAggregate
 {
     /**
      * @var Value[]
@@ -40,5 +40,10 @@ final class ValueCollection implements \IteratorAggregate
     public function getIterator(): ValueCollectionIterator
     {
         return new ValueCollectionIterator($this);
+    }
+
+    public function count(): int
+    {
+        return \count($this->items);
     }
 }

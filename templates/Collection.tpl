@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 namespace {{namespace}};
 
-final class {{class}}Collection implements \IteratorAggregate
+final class {{class}}Collection implements \Countable, \IteratorAggregate
 {
     /**
      * @var {{class}}[]
@@ -40,5 +40,10 @@ final class {{class}}Collection implements \IteratorAggregate
     public function getIterator(): {{class}}CollectionIterator
     {
         return new {{class}}CollectionIterator($this);
+    }
+
+    public function count(): int
+    {
+        return \count($this->items);
     }
 }

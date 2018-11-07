@@ -50,6 +50,13 @@ final class CollectionTest extends TestCase
         $this->assertSame($value, $collection->items()[0]);
     }
 
+    public function test_values_can_be_counted(): void
+    {
+        $collection = ValueCollection::fromList(new Value, new Value);
+
+        $this->assertCount(2, $collection);
+    }
+
     public function test_values_can_be_iterated(): void
     {
         $value = new Value;
