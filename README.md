@@ -165,8 +165,8 @@ $values = ValueCollection::fromList(new Value, new Value);
 ```php
 $values = new ValueCollection;
 
-$value->add(new Value);
-$value->add(new Value);
+$values->add(new Value);
+$values->add(new Value);
 ```
 
 # Shaku?
