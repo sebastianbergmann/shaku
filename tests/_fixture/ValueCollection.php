@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 namespace vendor;
 
-final class FooCollection implements \IteratorAggregate
+final class ValueCollection implements \IteratorAggregate
 {
     /**
-     * @var Foo[]
+     * @var Value[]
      */
     private $items = [];
 
@@ -19,26 +19,26 @@ final class FooCollection implements \IteratorAggregate
         return $collection;
     }
 
-    public static function fromList(Foo ...$items): self
+    public static function fromList(Value ...$items): self
     {
         return self::fromArray($items);
     }
 
-    public function add(Foo $item): void
+    public function add(Value $item): void
     {
         $this->items[] = $item;
     }
 
     /**
-     * @return Foo[]
+     * @return Value[]
      */
     public function items(): array
     {
         return $this->items;
     }
 
-    public function getIterator(): FooCollectionIterator
+    public function getIterator(): ValueCollectionIterator
     {
-        return new FooCollectionIterator($this);
+        return new ValueCollectionIterator($this);
     }
 }

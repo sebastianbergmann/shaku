@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 namespace vendor;
 
-final class FooCollectionIterator implements \Iterator
+final class ValueCollectionIterator implements \Iterator
 {
     /**
-     * @var Foo[]
+     * @var Value[]
      */
     private $items;
 
@@ -13,7 +13,7 @@ final class FooCollectionIterator implements \Iterator
      */
     private $position;
 
-    public function __construct(FooCollection $collection)
+    public function __construct(ValueCollection $collection)
     {
         $this->items = $collection->items();
     }
@@ -33,7 +33,7 @@ final class FooCollectionIterator implements \Iterator
         return $this->position;
     }
 
-    public function current(): Foo
+    public function current(): Value
     {
         return $this->items[$this->position];
     }
