@@ -1,0 +1,42 @@
+{
+    "name": "sebastian/shaku",
+    "description": "Tool to automatically generate type-safe Collection and CollectionIterator classes",
+    "homepage": "https://github.com/sebastianbergmann/shaku",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Sebastian Bergmann",
+            "email": "sebastian@phpunit.de",
+            "role": "lead"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/sebastianbergmann/shaku/issues"
+    },
+    "config": {
+        "platform": {
+            "php": "7.2.0"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.2",
+        "sebastian/version": "^2.0.1",
+        "symfony/console": "^4.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "bin": [
+        "shaku"
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
