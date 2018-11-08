@@ -2,7 +2,7 @@
 
 All notable changes to Shaku are documented in this file using the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-## [1.3.0] - 2018-MM-DD
+## [1.3.0] - 2018-11-08
 
 ### Added
 
