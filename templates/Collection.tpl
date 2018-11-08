@@ -24,6 +24,10 @@ final class {{class}}Collection implements \Countable, \IteratorAggregate
         return self::fromArray($items);
     }
 
+    {{visibility}} function __construct()
+    {
+    }
+
     {{visibility}} function add({{class}} $item): void
     {
         $this->items[] = $item;
