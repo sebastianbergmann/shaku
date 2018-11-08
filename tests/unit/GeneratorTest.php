@@ -29,24 +29,24 @@ final class GeneratorTest extends TestCase
     public function test_Collection_class_is_generated_correctly(): void
     {
         $this->assertStringEqualsFile(
-            __DIR__ . '/../_fixture/ValueCollection.php',
-            $this->generator->generateCollectionCode('vendor', 'Value', false)
+            __DIR__ . '/../_fixture/mutable/ValueCollection.php',
+            $this->generator->generateCollectionCode('test\\mutable', 'Value', false)
         );
     }
 
     public function test_immutable_Collection_class_is_generated_correctly(): void
     {
         $this->assertStringEqualsFile(
-            __DIR__ . '/../_fixture/ImmutableValueCollection.php',
-            $this->generator->generateCollectionCode('vendor', 'Value', true)
+            __DIR__ . '/../_fixture/immutable/ValueCollection.php',
+            $this->generator->generateCollectionCode('test\\immutable', 'Value', true)
         );
     }
 
     public function test_CollectionIterator_class_is_generated_correctly(): void
     {
         $this->assertStringEqualsFile(
-            __DIR__ . '/../_fixture/ValueCollectionIterator.php',
-            $this->generator->generateCollectionIteratorCode('vendor', 'Value')
+            __DIR__ . '/../_fixture/mutable/ValueCollectionIterator.php',
+            $this->generator->generateCollectionIteratorCode('test\\mutable', 'Value')
         );
     }
 }

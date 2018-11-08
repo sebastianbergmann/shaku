@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace vendor;
+namespace test\mutable;
 
 final class Value
 {

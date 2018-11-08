@@ -10,16 +10,16 @@
 namespace SebastianBergmann\Shaku;
 
 use PHPUnit\Framework\TestCase;
-use vendor\Value;
-use vendor\ValueCollection;
+use test\mutable\Value;
+use test\mutable\ValueCollection;
 
 /**
- * @covers vendor\ValueCollection
- * @covers vendor\ValueCollectionIterator
+ * @covers \test\mutable\ValueCollection
+ * @covers \test\mutable\ValueCollectionIterator
  *
- * @uses vendor\Value
+ * @covers \test\mutable\Value
  */
-final class CollectionTest extends TestCase
+final class MutableCollectionTest extends TestCase
 {
     public function test_can_be_created_from_array_of_values(): void
     {
@@ -41,13 +41,14 @@ final class CollectionTest extends TestCase
 
     public function test_values_can_be_added(): void
     {
-        $value = new Value;
+        $values = [new Value, new Value];
 
         $collection = new ValueCollection;
 
-        $collection->add($value);
+        $collection->add($values[0]);
+        $collection->add($values[1]);
 
-        $this->assertSame($value, $collection->items()[0]);
+        $this->assertSame($values, $collection->items());
     }
 
     public function test_values_can_be_counted(): void
@@ -61,9 +62,7 @@ final class CollectionTest extends TestCase
     {
         $value = new Value;
 
-        $collection = new ValueCollection;
-
-        $collection->add($value);
+        $collection = ValueCollection::fromList($value);
 
         foreach ($collection as $key => $_value) {
             $this->assertSame(0, $key);
