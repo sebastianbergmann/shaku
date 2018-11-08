@@ -73,6 +73,10 @@ final class ValueCollection implements \Countable, \IteratorAggregate
         return self::fromArray($items);
     }
 
+    private function __construct()
+    {
+    }
+
     private function add(Value $item): void
     {
         $this->items[] = $item;
@@ -81,7 +85,7 @@ final class ValueCollection implements \Countable, \IteratorAggregate
     /**
      * @return Value[]
      */
-    public function items(): array
+    public function toArray(): array
     {
         return $this->items;
     }
@@ -94,6 +98,22 @@ final class ValueCollection implements \Countable, \IteratorAggregate
     public function count(): int
     {
         return \count($this->items);
+    }
+
+    public function isEmpty(): bool
+    {
+        return empty($this->items);
+    }
+
+    public function contains(Value $value): bool
+    {
+        foreach ($this->items as $item) {
+            if ($item === $value) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
 ```
@@ -116,7 +136,7 @@ final class ValueCollectionIterator implements \Iterator
 
     public function __construct(ValueCollection $collection)
     {
-        $this->items = $collection->items();
+        $this->items = $collection->toArray();
     }
 
     public function rewind(): void
