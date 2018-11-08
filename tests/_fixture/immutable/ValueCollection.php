@@ -50,4 +50,9 @@ final class ValueCollection implements \Countable, \IteratorAggregate
     {
         return \count($this->items);
     }
+
+    public function isEmpty(): bool
+    {
+        return empty($this->items);
+    }
 }

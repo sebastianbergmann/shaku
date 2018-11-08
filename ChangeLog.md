@@ -4,9 +4,13 @@ All notable changes to Shaku are documented in this file using the [Keep a CHANG
 
 ## [1.3.0] - 2018-MM-DD
 
+### Added
+
+* The `Collection::isEmpty()` method has been added
+
 ### Changed
 
-* `Collection::items()` has been renamed to `Collection::toArray()`
+* The `Collection::items()` method has been renamed to `Collection::toArray()`
 
 ## [1.2.0] - 2018-11-08
 

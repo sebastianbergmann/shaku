@@ -44,6 +44,7 @@ final class ImmutableCollectionTest extends TestCase
         $collection = ValueCollection::fromList(new Value, new Value);
 
         $this->assertCount(2, $collection);
+        $this->assertFalse($collection->isEmpty());
     }
 
     public function test_values_can_be_iterated(): void
