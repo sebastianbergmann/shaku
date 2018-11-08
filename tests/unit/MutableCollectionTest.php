@@ -21,6 +21,13 @@ use test\mutable\ValueCollection;
  */
 final class MutableCollectionTest extends TestCase
 {
+    public function test_can_be_created_without_values(): void
+    {
+        $collection = new ValueCollection;
+
+        $this->assertInstanceOf(ValueCollection::class, $collection);
+    }
+
     public function test_can_be_created_from_array_of_values(): void
     {
         $values = [new Value, new Value];

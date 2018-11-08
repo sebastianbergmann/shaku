@@ -24,6 +24,10 @@ final class ValueCollection implements \Countable, \IteratorAggregate
         return self::fromArray($items);
     }
 
+    public function __construct()
+    {
+    }
+
     public function add(Value $item): void
     {
         $this->items[] = $item;
