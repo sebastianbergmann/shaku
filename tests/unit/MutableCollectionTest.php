@@ -34,7 +34,7 @@ final class MutableCollectionTest extends TestCase
 
         $collection = ValueCollection::fromArray($values);
 
-        $this->assertSame($values, $collection->items());
+        $this->assertSame($values, $collection->toArray());
     }
 
     public function test_can_be_created_from_list_of_values(): void
@@ -43,7 +43,7 @@ final class MutableCollectionTest extends TestCase
 
         $collection = ValueCollection::fromList($value);
 
-        $this->assertSame($value, $collection->items()[0]);
+        $this->assertSame($value, $collection->toArray()[0]);
     }
 
     public function test_values_can_be_added(): void
@@ -55,7 +55,7 @@ final class MutableCollectionTest extends TestCase
         $collection->add($values[0]);
         $collection->add($values[1]);
 
-        $this->assertSame($values, $collection->items());
+        $this->assertSame($values, $collection->toArray());
     }
 
     public function test_values_can_be_counted(): void

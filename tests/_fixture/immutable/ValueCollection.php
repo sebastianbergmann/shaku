@@ -36,7 +36,7 @@ final class ValueCollection implements \Countable, \IteratorAggregate
     /**
      * @return Value[]
      */
-    public function items(): array
+    public function toArray(): array
     {
         return $this->items;
     }

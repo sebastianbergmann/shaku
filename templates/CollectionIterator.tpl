@@ -15,7 +15,7 @@ final class {{class}}CollectionIterator implements \Iterator
 
     public function __construct({{class}}Collection $collection)
     {
-        $this->items = $collection->items();
+        $this->items = $collection->toArray();
     }
 
     public function rewind(): void

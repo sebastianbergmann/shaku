@@ -15,7 +15,7 @@ final class ValueCollectionIterator implements \Iterator
 
     public function __construct(ValueCollection $collection)
     {
-        $this->items = $collection->items();
+        $this->items = $collection->toArray();
     }
 
     public function rewind(): void

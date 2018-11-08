@@ -36,7 +36,7 @@ final class {{class}}Collection implements \Countable, \IteratorAggregate
     /**
      * @return {{class}}[]
      */
-    public function items(): array
+    public function toArray(): array
     {
         return $this->items;
     }
