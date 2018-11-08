@@ -77,4 +77,14 @@ final class MutableCollectionTest extends TestCase
             $this->assertSame($value, $_value);
         }
     }
+
+    public function test_can_be_queried_whether_it_contains_a_value(): void
+    {
+        $value = new Value;
+
+        $collection = ValueCollection::fromList($value);
+
+        $this->assertTrue($collection->contains($value));
+        $this->assertFalse($collection->contains(new Value));
+    }
 }

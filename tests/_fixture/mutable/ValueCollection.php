@@ -55,4 +55,15 @@ final class ValueCollection implements \Countable, \IteratorAggregate
     {
         return empty($this->items);
     }
+
+    public function contains(Value $value): bool
+    {
+        foreach ($this->items as $item) {
+            if ($item === $value) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

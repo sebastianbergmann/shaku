@@ -6,7 +6,7 @@ All notable changes to Shaku are documented in this file using the [Keep a CHANG
 
 ### Added
 
-* The `Collection::isEmpty()` method has been added
+* The `Collection::contains()` and `Collection::isEmpty()` methods have been added
 
 ### Changed
 
