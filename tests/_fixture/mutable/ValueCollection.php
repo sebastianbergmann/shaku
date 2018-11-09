@@ -56,10 +56,10 @@ final class ValueCollection implements \Countable, \IteratorAggregate
         return empty($this->items);
     }
 
-    public function contains(Value $value): bool
+    public function contains(Value $item): bool
     {
-        foreach ($this->items as $item) {
-            if ($item === $value) {
+        foreach ($this->items as $_item) {
+            if ($_item === $item) {
                 return true;
             }
         }
@@ -67,10 +67,10 @@ final class ValueCollection implements \Countable, \IteratorAggregate
         return false;
     }
 
-    public function remove(Value $value): bool
+    public function remove(Value $item): bool
     {
-        foreach ($this->items as $key => $item) {
-            if ($item === $value) {
+        foreach ($this->items as $key => $_item) {
+            if ($_item === $item) {
                 unset($this->items[$key]);
 
                 return true;

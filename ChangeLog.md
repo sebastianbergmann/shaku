@@ -8,6 +8,10 @@ All notable changes to Shaku are documented in this file using the [Keep a CHANG
 
 * The `Collection::remove()` method has been added
 
+### Fixed
+
+* The `Collection` template contained a hard-coded class name for the `contains()` method
+
 ## [1.3.0] - 2018-11-08
 
 ### Added
