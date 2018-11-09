@@ -66,17 +66,4 @@ final class ValueCollection implements \Countable, \IteratorAggregate
 
         return false;
     }
-
-    private function remove(Value $item): bool
-    {
-        foreach ($this->items as $key => $_item) {
-            if ($_item === $item) {
-                unset($this->items[$key]);
-
-                return true;
-            }
-        }
-
-        return false;
-    }
 }

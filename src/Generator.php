@@ -13,9 +13,22 @@ final class Generator
 {
     public function generateCollectionCode(string $namespace, string $className, bool $immutable): string
     {
+        $visibility = $immutable ? 'private' : 'public';
+        $remove     = '';
+
+        if ($visibility === 'public') {
+            $remove = $this->render(__DIR__ . '/../templates/Collection_remove.tpl', $namespace, $className);
+        }
+
         return \str_replace(
-            '{{visibility}}',
-            $immutable ? 'private' : 'public',
+            [
+                '{{remove}}',
+                '{{visibility}}'
+            ],
+            [
+                $remove,
+                $visibility
+            ],
             $this->render(__DIR__ . '/../templates/Collection.tpl', $namespace, $className)
         );
     }
