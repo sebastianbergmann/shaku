@@ -105,23 +105,10 @@ final class ValueCollection implements \Countable, \IteratorAggregate
         return empty($this->items);
     }
 
-    public function contains(Value $value): bool
+    public function contains(Value $item): bool
     {
-        foreach ($this->items as $item) {
-            if ($item === $value) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    private function remove(Value $value): bool
-    {
-        foreach ($this->items as $key => $item) {
-            if ($item === $value) {
-                unset($this->items[$key]);
-
+        foreach ($this->items as $_item) {
+            if ($_item === $item) {
                 return true;
             }
         }
