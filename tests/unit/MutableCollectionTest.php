@@ -94,8 +94,8 @@ final class MutableCollectionTest extends TestCase
 
         $collection = ValueCollection::fromList($value);
 
-        $collection->remove($value);
-
+        $this->assertTrue($collection->remove($value));
         $this->assertFalse($collection->contains($value));
+        $this->assertFalse($collection->remove(new Value));
     }
 }
