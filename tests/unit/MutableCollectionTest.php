@@ -87,4 +87,15 @@ final class MutableCollectionTest extends TestCase
         $this->assertTrue($collection->contains($value));
         $this->assertFalse($collection->contains(new Value));
     }
+
+    public function test_values_can_be_removed(): void
+    {
+        $value = new Value;
+
+        $collection = ValueCollection::fromList($value);
+
+        $collection->remove($value);
+
+        $this->assertFalse($collection->contains($value));
+    }
 }

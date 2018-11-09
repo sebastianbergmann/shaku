@@ -2,6 +2,12 @@
 
 All notable changes to Shaku are documented in this file using the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## [1.4.0] - 2018-MM-DD
+
+### Added
+
+* The `Collection::remove()` method has been added
+
 ## [1.3.0] - 2018-11-08
 
 ### Added
@@ -28,6 +34,7 @@ All notable changes to Shaku are documented in this file using the [Keep a CHANG
 
 * Initial release
 
+[1.4.0]: https://github.com/sebastianbergmann/shaku/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/sebastianbergmann/shaku/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/sebastianbergmann/shaku/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/sebastianbergmann/shaku/compare/1.0.0...1.1.0

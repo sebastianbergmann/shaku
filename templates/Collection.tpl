@@ -66,4 +66,17 @@ final class {{class}}Collection implements \Countable, \IteratorAggregate
 
         return false;
     }
+
+    {{visibility}} function remove(Value $value): bool
+    {
+        foreach ($this->items as $key => $item) {
+            if ($item === $value) {
+                unset($this->items[$key]);
+
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
