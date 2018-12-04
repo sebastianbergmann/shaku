@@ -70,9 +70,7 @@ final class MutableCollectionTest extends TestCase
     {
         $value = new Value;
 
-        $collection = ValueCollection::fromList($value);
-
-        foreach ($collection as $key => $_value) {
+        foreach (ValueCollection::fromList($value) as $key => $_value) {
             $this->assertSame(0, $key);
             $this->assertSame($value, $_value);
         }
