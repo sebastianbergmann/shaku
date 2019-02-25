@@ -1,6 +1,7 @@
 /.idea
 /.php_cs.cache
 /.php_cs
+/.phpunit.result.cache
 /build/phar
 /build/*.phar*
 /composer.lock
