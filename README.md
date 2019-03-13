@@ -122,7 +122,7 @@ final class ValueCollection implements \Countable, \IteratorAggregate
 <?php declare(strict_types=1);
 namespace vendor;
 
-final class ValueCollectionIterator implements \Iterator
+final class ValueCollectionIterator implements \Countable, \Iterator
 {
     /**
      * @var Value[]
@@ -137,6 +137,11 @@ final class ValueCollectionIterator implements \Iterator
     public function __construct(ValueCollection $collection)
     {
         $this->items = $collection->toArray();
+    }
+
+    public function count(): int
+    {
+        return \iterator_count($this);
     }
 
     public function rewind(): void

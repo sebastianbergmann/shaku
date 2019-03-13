@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 namespace {{namespace}};
 
-final class {{class}}CollectionIterator implements \Iterator
+final class {{class}}CollectionIterator implements \Countable, \Iterator
 {
     /**
      * @var {{class}}[]
@@ -16,6 +16,11 @@ final class {{class}}CollectionIterator implements \Iterator
     public function __construct({{class}}Collection $collection)
     {
         $this->items = $collection->toArray();
+    }
+
+    public function count(): int
+    {
+        return \iterator_count($this);
     }
 
     public function rewind(): void
