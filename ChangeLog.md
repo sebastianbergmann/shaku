@@ -7,6 +7,7 @@ All notable changes to Shaku are documented in this file using the [Keep a CHANG
 ### Added
 
 * The `CollectionIterator` now implements the `Countable` interface
+* `Collection::fromArray()` now has a type annotation
 
 ## [1.4.0] - 2018-11-09
 

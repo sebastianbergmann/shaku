@@ -8,6 +8,9 @@ final class {{class}}Collection implements \Countable, \IteratorAggregate
      */
     private $items = [];
 
+    /**
+     * @param {{class}}[] $items
+     */
     public static function fromArray(array $items): self
     {
         $collection = new self;

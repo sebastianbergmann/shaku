@@ -8,6 +8,9 @@ final class ValueCollection implements \Countable, \IteratorAggregate
      */
     private $items = [];
 
+    /**
+     * @param Value[] $items
+     */
     public static function fromArray(array $items): self
     {
         $collection = new self;
