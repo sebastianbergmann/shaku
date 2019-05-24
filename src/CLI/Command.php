@@ -55,11 +55,15 @@ final class Command extends AbstractCommand
 
         $output->writeln(
             \sprintf(
-                'Generated code for "%s" and "%s" in "%s" and "%s", respectively.',
+                'Generated code for "%s" and "%s" in "%s%s%s.php" and "%s%s%s.php", respectively.',
                 $className . 'Collection',
                 $className . 'CollectionIterator',
-                $directory . \DIRECTORY_SEPARATOR . 'Collection.php',
-                $directory . \DIRECTORY_SEPARATOR . 'CollectionIterator.php'
+                $directory,
+                \DIRECTORY_SEPARATOR,
+                $className . 'Collection',
+                $directory,
+                \DIRECTORY_SEPARATOR,
+                $className . 'CollectionIterator'
             )
         );
     }
